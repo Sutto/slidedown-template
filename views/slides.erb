@@ -1,0 +1,7 @@
+<% slides.each_with_index do |slide, idx| %>
+  <div class="<%= slide.classes.join(' ').strip %>">
+    <div id="slide-<%= idx %>" class="content">
+      <%= slide.html %>
+    </div>
+  </div>
+<% end %>

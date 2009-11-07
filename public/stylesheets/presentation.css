@@ -1,0 +1,130 @@
+body {
+  background: #FFF;
+}
+
+@font-face {
+	font-family: 'Inconsolata Medium';
+	src: url('Inconsolata.eot');
+	src: local('Inconsolata Medium'), local('Inconsolata'), url('fonts/Inconsolata.otf') format('opentype');
+}
+
+#footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: #333;
+  color: #EEE;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#footer p {
+  padding: 0.5em 0.8em;
+  font-weight: bold;
+  font-size: 0.6em;
+}
+
+#header {
+  /*display: none;*/
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: #333;
+  text-align: center;
+  color: white;
+}
+
+#header p {
+  padding: 0.5em;
+  font-size: 0.5em;
+  line-height: 1.3em;
+  font-family: 'Inconsolata Medium', 'Bitstream Vera Sans Mono', Courier, monospace !important;
+}
+#header p a {
+  text-decoration: none;
+  color: #809FFF;
+}
+
+#presentation-authors {
+  float: right;
+}
+
+#presentation-name {
+  float: left;
+}
+
+#slides #track .image .content {
+  text-align: center;
+}
+
+#slides #track .content p {
+  margin: 0.75em 0;
+}
+
+#slides #track .image .content img {
+  -webkit-box-shadow: 0 0 0.5em #666;
+  border: 0.1em solid #222;
+  -webkit-border-radius: 0.15em;
+  -moz-border-radius: 0.15em;
+  background: #F9F9F9;
+}
+
+#slides #track .content h1 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+#slides #track .content {
+  text-align: center;
+}
+
+#slides #track .titlescreen .content h1 {
+  font-size: 1.8em;
+  margin: 0.5em 0;
+  color: #8F1E1E;
+}
+
+#slides #track .titlescreen .content h2 {
+  font-size: 1.4em;
+  margin: 0.5em 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#slides #track .content ul {
+  list-style: none;
+  line-height: 1.8em;
+}
+
+#slides #track .content ul li {
+  list-style: none;
+}
+
+
+body {
+  background: #FFF;
+  color: #111;
+}
+
+#track {
+  font-size: 0.9em;
+}
+
+div.highlight {
+  font-size: 0.7em;
+  text-align: left;;
+  font-family: 'Inconsolata Medium', 'Bitstream Vera Sans Mono', Courier, monospace !important;
+}
+
+div.code pre {
+  background: #EEE;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  padding: 1em;
+  font-family: 'Inconsolata Medium', 'Bitstream Vera Sans Mono', Courier, monospace !important;
+  margin: 0 1em;
+}

@@ -1,0 +1,3 @@
+[submodule "vendor/slidedown"]
+	path = vendor/slidedown
+	url = git://github.com/Sutto/slidedown.git
