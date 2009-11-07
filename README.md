@@ -14,6 +14,6 @@ Edit...
 It also includes inconsolata for presentation code awesome sauce.
 
 To get started, fork the project for your presentation.
-Clone + run @@@git submodule init && git submodule update@@@
+Clone + run `git submodule init && git submodule update`
 Next, edit the files above.
-Use @@@ruby presentation_app.rb@@@ to view it (hit /)
+Use `ruby presentation_app.rb` to view it (hit /)
