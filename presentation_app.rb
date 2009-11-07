@@ -35,7 +35,9 @@ helpers do
     @presentation ||= OpenStruct.new(YAML.load_file(root_dir.join("presentation.yml")))
   end
   
-  def live_url(path = "/")
+  def live_url(path = "/", inc_host = false)
+    path = "#{request.script_name}#{path}"
+    return path if !inc_host
     scheme, port = request.scheme, request.port
     url = scheme + "://"
     url << request.host
@@ -53,11 +55,11 @@ helpers do
   end
   
   def has_js(*js_files)
-    js_files.map { |file| JS_TAG_TEMPLATE % live_url(File.join("javascripts", "#{file}.js")) }.join("\n")
+    js_files.map { |file| JS_TAG_TEMPLATE % live_url(File.join("/javascripts", "#{file}.js")) }.join("\n")
   end
   
   def has_css(*css_files)
-    css_files.map { |file| CSS_TAG_TEMPLATE % live_url(File.join("stylesheets", "#{file}.css")) }.join("\n")
+    css_files.map { |file| CSS_TAG_TEMPLATE % live_url(File.join("/stylesheets", "#{file}.css")) }.join("\n")
   end
   
   
@@ -66,5 +68,8 @@ end
 get '/' do
   # Render the slides
   @slides = SlideDown.new(root_dir.join("slides.md").read).render(root_dir.join("views", "slides").expand_path)
-  erb :presentation
+  rendered = erb :presentation
+  # Cache the presentation - renamed to index.html when deploying.
+  File.open(root_dir.join("public", "cached.html"), "w+") { |f| f.puts(rendered) }
+  rendered
 end
